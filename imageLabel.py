@@ -3,7 +3,7 @@ from PIL import ImageTk, Image
 import os
 import cv2
 
-flip = True
+flip = False
 
 root = Tk()
 
@@ -72,14 +72,15 @@ def nextImage(idx):
 
 
 def saveImage(idx):
-    with open("imageList.txt", "a") as f:
-        f.write(fileNames[idx] + " : " + e1.get() + "\n")
     imgLoad = cv2.imread("toLabel/" + fileNames[idx])
 
     if flip:
         imgLoad = cv2.rotate(imgLoad, cv2.ROTATE_90_COUNTERCLOCKWISE)
 
-    cv2.imwrite("labelled/" + fileNames[idx], imgLoad)
+    fn = fileNames[idx].split("_")
+
+    cv2.imwrite("labelled/" + fn[0] + "_" +
+                fn[1] + "_" + e1.get() + ".jpg", imgLoad)
     os.remove("toLabel/" + fileNames[idx])
 
 
