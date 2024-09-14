@@ -1,6 +1,6 @@
 ## Solar meter reading
 
-![](imgs\IMG_1216.jpg)
+![](imgs/IMG_1216.jpg)
 ![](imgs/3DParts.png)
 
 A (almost) complete system for reading an electricity meter and uploading the data to a google spreadsheet. The project was to record a meter that records solar energy generation and upload it to a spreadsheet. Some sample images are taken each night and a network is train by hand annotated images.
@@ -11,4 +11,4 @@ The camera captures and image of the meter each night and uploads it to a server
 
 ### This is the meter reading recorded over 1 Year
 
-![](imgs\chart.png)
+![](imgs/chart.png)
